@@ -4,7 +4,7 @@ import "./Footer.scss";
 
 const Footer = () => {
   return (
-    <footer>All Rights Reserved || &copy; vishwajeet9881@gmail.com</footer>
+    <footer> ⚫ All Rights Reserved || &copy; vishwajeet9881@gmail.com</footer>
   );
 };
 
