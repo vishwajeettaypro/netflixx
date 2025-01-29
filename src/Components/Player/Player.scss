@@ -1,41 +1,20 @@
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f4f4f4;  // Light background color for the container
+.player {
+  width: 100vw;
+  height: 100vh;
+  .back {
+    position: absolute;
+    padding: 2rem;
+    z-index: 1;
+    svg {
+      margin-top: 25px;
+      color: white;
+      font-size: 2rem;
+      cursor: pointer;
+    }
   }
-  
-  .Player{
-    max-width: 800px;  // Limit the width of the player
-    width: 100%;
-    position: relative;
-  }
-  
   video {
-    width: 100%;  // Make video take up the full width of the player
-    height: auto;  // Maintain aspect ratio
-    border-radius: 8px;  // Optional: rounded corners for the video
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  // Optional: slight shadow around the video
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
   }
-  
-  button {
-    padding: 1rem 2rem;
-    font-size: 1.2rem;
-    background-color: #1f80e0;  // Blue background for the button
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
-    transition: background-color 0.3s ease;
-  
-    &:hover {
-      background-color: #166fa3;  // Darker blue when hovered
-    }
-  
-    &:focus {
-      outline: none;  // Remove outline when focused
-    }
-  }
-  
+}

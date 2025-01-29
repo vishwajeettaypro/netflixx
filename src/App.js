@@ -2,7 +2,7 @@ import './App.scss';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";  // Import React Router
 import Header from './Components/Header/Header';  // Import your Header component
 import Home from './Components/Home/Home';  // Import your Home component
-import Player from './Components/Player/Player';  // Capitalize 'Layer' if file is named Layer.jsx
+import Player from './Components/Player/Player';  // 
 import Footer from './Components/Footer/Footer';  // Import your Footer component
 
 function App() {

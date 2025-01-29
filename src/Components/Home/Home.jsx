@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom"; 
+import { Link, useNavigate } from 'react-router-dom';
 import "./Home.scss";
 import axios from "axios";
 import { BiPlay } from 'react-icons/bi';
 import { AiOutlinePlus } from 'react-icons/ai';
+
 
 const apiKey = 'ec915dfd98b8f64885b4f22a398c698b';
 const url = 'https://api.themoviedb.org/3';
@@ -13,6 +14,7 @@ const NowPlaying = 'now_playing';
 const Popular = "popular";
 // const TopRated = "top_rated";
 const TopRated = 'top_rated';
+
 
 // Card component to render individual movie posters
 const Card = ({ img }) => (
@@ -43,7 +45,7 @@ const Home = () => {
     const [PopularMovies, setPopular] = useState([]);
     const [TopRatedMovies, setTopRated] = useState([]);
     const [GenresList, setGenresList] = useState([]); 
-
+    const navigate = useNavigate();
     // Disable the ESLint warning for missing dependency (TopRatedMovies)
     // eslint-disable-next-line react-hooks/exhaustive-deps
     useEffect(() => {
@@ -95,7 +97,7 @@ const Home = () => {
                        <p>{PopularMovies[0].overview}</p>
                        </div>
                         <div className="button-container">
-                        <button className="playbutton"><BiPlay /> <span>Play</span> </button>
+                        <button onClick={() => navigate('/Player')} className="playbutton"><BiPlay /> <span>Play</span> </button>
                         <button className="mylist"><span>My List</span><AiOutlinePlus /></button>
                         </div>
                     </div>
