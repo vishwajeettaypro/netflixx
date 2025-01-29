@@ -28,10 +28,10 @@ const Header = () => {
     <nav className="header">
       <img src={logo} alt="logo" />
       <div>
-        <Link className="link" to="/tvshows">TV Shows</Link>
-        <Link className="link" to="/movies">Movies</Link>
-        <Link className="link" to="/recent">Recently Added</Link>
-        <Link className="link" to="/mylist">My List</Link>
+        <Link className="link" to >TV Shows</Link>
+        <Link className="link" >Movies</Link>
+        <Link className="link" >Recently Added</Link>
+        <Link className="link" >My List</Link>
       </div>
       <ImSearch />
     </nav>

@@ -89,14 +89,16 @@ const Home = () => {
                 backgroundImage: PopularMovies[0] ? `url(${imgUrl}/${PopularMovies[0].poster_path})` : 'none',
             }}>
                 {PopularMovies[0] && (
-                    <>
-                        <h1>{PopularMovies[0].original_title}</h1>
-                        <p>{PopularMovies[0].overview}</p>
+                    <div>
+                       <div className="heading">
+                       <h1>{PopularMovies[0].original_title}</h1>
+                       <p>{PopularMovies[0].overview}</p>
+                       </div>
                         <div className="button-container">
-                        <button><BiPlay /> Play </button>
-                        <button>My List<AiOutlinePlus /></button>
+                        <button className="playbutton"><BiPlay /> <span>Play</span> </button>
+                        <button className="mylist"><span>My List</span><AiOutlinePlus /></button>
                         </div>
-                    </>
+                    </div>
                 )}
             </div>
 
